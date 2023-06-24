@@ -682,8 +682,7 @@ def train_KD(train_loader, test_loader, train_dataset,test_dataset, model_teache
                 _, predicted = torch.max(outputs.data, 1)
                 total += labels.size(0)
                 correct += (predicted == labels).sum().item()
-            print('Accuracy of the model of distillation on the train images: {} %'.format(
-                100 * correct / total))
+            print('Accuracy of the model of distillation on the train images: {} %'.format(100 * correct / total))
 
 
 preprocess_train = tv.transforms.Compose([
